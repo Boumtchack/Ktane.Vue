@@ -69,4 +69,8 @@ function updateOthers(array) {
   <WhosFirst />
   <div>{{ titles[5] }}</div>
   <MemoryModule />
+  <div>{{ titles[6] }}</div>
+  <div>{{ titles[7] }}</div>
+  <div>{{ titles[8] }}</div>
+  <div>{{ titles[9] }}</div>
 </template>
