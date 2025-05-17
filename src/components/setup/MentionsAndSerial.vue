@@ -18,28 +18,34 @@ function sendinfo(){
   <section id="mentionsAndSerial">
     <input type="checkbox" name="car" id="car" v-model="CAR" @change="sendinfo"><label for="car">CAR</label>
     <input type="checkbox" name="frk" id="frk" v-model="FRK" @change="sendinfo"><label for="frk">FRK</label>
-    <input type="checkbox" name="vowel" id="vowel" v-model="vowel" @change="sendinfo"><label for="vowel">vowel</label>
-    <input type="checkbox" name="even" id="even" v-model="even" @change="sendinfo"><label for="even">even</label>
-    <input type="checkbox" name="port" id="port" v-model="port" @change="sendinfo"><label for="port">port</label>
+    <input type="checkbox" name="port" id="port" v-model="port" @change="sendinfo"><label for="port">port parallèle</label>
+    <input type="checkbox" name="vowel" id="vowel" v-model="vowel" @change="sendinfo"><label for="vowel">voyelles</label>
+    <input type="checkbox" name="even" id="even" v-model="even" @change="sendinfo"><label for="even">nombre pair</label>
   </section>
 </template>
 
 <style scoped>
 #mentionsAndSerial {
   display: flex;
+  flex-direction: column; /* Changed flex direction to top-to-bottom */
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 3px;
 }
 input[type="checkbox"] {
   display: none;
 }
+
 label {
-  display: block;
-  height: 100px;
-  width: 100px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
   color: black;
   background-color: white;
+  text-align: center; /* Centers the text horizontally */
 }
 input[type="checkbox"]:checked + label {
   background-color: green;
